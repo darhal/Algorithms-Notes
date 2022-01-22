@@ -53,7 +53,7 @@ int maxSubArray(vector<int>& arr) {
     int n = arr.size();
     int res = arr[0], maxEle = arr[0];
         
-    for(int i=1; i<n; i++) {
+    for (int i=1; i<n; i++) {
         maxEle = max(maxEle + arr[i], arr[i]);
         res = max(maxEle, res);
     }

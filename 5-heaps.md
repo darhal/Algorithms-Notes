@@ -5,7 +5,7 @@ Useful to find a median in a data stream for example :
 - We can store the smaller part of the list in a max_heap. We are using max_heap because we are only interested in knowing the largest number in the first half of the list.
 - We can store the larger part of the list in a min_heap. We are using min_heap because we are only interested in knowing the smallest number in the second half of the list.
 - The median of the current list of numbers can be calculated from the top element of the two heaps.
-- Inserting a number in a heap will take O(log N) (better than the brute force approach)
+- Inserting a number in a heap will take O(logN) (better than the brute force approach)
 
 
 An alternative approach chould be using C++ multiset (Which is red-black tree)
