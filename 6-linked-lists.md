@@ -37,6 +37,9 @@ Once the cycle is detected if we reset slow to the beginning and reduce the spee
 	- Advance fast 2 steps
 - When fast reaches the end, Slow will be already in the middle
 
+### Problems
+- https://leetcode.com/problems/find-the-duplicate-number/
+
 ### In place reversal of linked list : 
 **Template (Recursive) :**
 ```cpp
