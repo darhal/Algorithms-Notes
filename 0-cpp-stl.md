@@ -82,16 +82,17 @@ std::nth_element(v.begin(), m, v.end());
 ### Min/Max :
 Syntax : `Itr max_element(Itr first, Itr last);`
 
-Returns the maximum element in the array/vector.
+-> Returns the maximum element in the array/vector.
 
 Syntax : `Itr min_element(Itr first, Itr last);`
 
-Returns the minimum element in the array/vector.
+-> Returns the minimum element in the array/vector.
 
 
 Syntax : `std::pair<T&,T&> minmax(T& a, T& b);` 
 
-Returns *references* to the smaller and the greater of a and b (respectively).
+-> Returns *references* to the smaller and the greater of a and b (respectively).
 
 Syntax : `std::pair<T,T> minmax( std::initializer_list<T> ilist);` 
-Returns the smallest and the greatest (respectively) of the values in initializer list .
+
+-> Returns the smallest and the greatest (respectively) of the values in initializer list .

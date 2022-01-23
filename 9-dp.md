@@ -48,3 +48,15 @@ Implemented with a loop/iteration. Starts at the base case(s) and build the solu
 ### Trade-offs :
 - No overhead meaning faster than memoization
 - Kinda hard to write correctly
+
+## Convert top-down (Recursive) to bottom-up (Iterative)
+Steps to convert top-down to bottom-up
+1. Do complete top-down implementation
+2. Initialize a dp array that is sized according to the state varriable.
+    - If there is two states the DP will be 2D array
+    - Values in the array should be opposite of what we are searching for (e.g : if we are searching for minimum set values to infinity, if we are searching for max set values to negative infinity)
+3. Set the base cases, same as the ones used in the top-down function.
+4. Write for loop that iterate over the state variables. Multiple state variables means nested for-loops. Loops should start iterating from the base cases.
+5. Each iteration of the inner-most loop represents a given state, and is equivalent to a function call to the same state in top-down. Copy the logic from the recursive top-down function into the for-loop and change the function calls to accessing the array. All dp(...) changes into dp[...].
+6. dp is now an array populated with the answer to the original problem for all possible states. Return the answer to the original problem by changing return dp(...) to return dp[...].
+
