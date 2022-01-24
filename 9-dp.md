@@ -85,9 +85,7 @@ When it comes to reducing state variables, it's hard to give any general advice 
 ## Iteration in the recurrence
 Some problems have a static recurrence relation.
 
-For example in Min cost climbind stairs the recurrence relation is : 
-
-`dp(i)=min(dp(i-1) + cost[i-1], dp(i-2) + cost[i-2])`
+For example in Min cost climbind stairs the recurrence relation is : `dp(i)=min(dp(i-1) + cost[i-1], dp(i-2) + cost[i-2])`
 
 Because we are only allowe dto clim 1 or to 2 steps at a time. If the problem changes to be we are allowed to make up to k steps the reccurence relation will become dynamic : 
 `dp(i)=min(dp(j) + cost[j]) for all (i-k) ≤ j <i`
@@ -95,7 +93,7 @@ Because we are only allowe dto clim 1 or to 2 steps at a time. If the problem ch
 **Note:** Usually, static recurrence relations can easily have state reduction. We can also reduce the memory used by only using finite number of variables to represent previous states.
 
 ## Counting DP
-Counting DP is different than the classical min/max DP. It's reccurance relation usualy looks something like this 
+Counting DP is different than the classical min/max DP. It's reccurance relation usualy looks something like this :
 `dp(i) = dp(i-1) + dp(i-2)`.
 
 In counting DP the base case should almost always never be 0 because if its the case we would be adding zeros all the way and the end result will end up also being 0.
