@@ -97,6 +97,7 @@ Syntax : `std::pair<T,T> minmax( std::initializer_list<T> ilist);`
 
 -> Returns the smallest and the greatest (respectively) of the values in initializer list .
 
+# Hashing
 ## Fibonacci Hashing
 Great article on fibonacci hashing : https://probablydance.com/2018/06/16/fibonacci-hashing-the-optimization-that-the-world-forgot-or-a-better-alternative-to-integer-modulo/
 
@@ -114,3 +115,24 @@ struct std::hash<std::vector<T>> {
     }
 };
 ````
+
+## To hash types that doesnt support hashing by default
+1. Define a hashing function
+```cpp
+template<class T> 
+struct std::hash<T> {
+    auto operator() (const T& key) const {
+        // Implement a hashing function
+        return hash;
+    }
+};
+```
+2. Define a compare function
+```cpp
+bool operator==(const T1& a1, const T2& a2)
+{
+    // Implementation ...
+    return result;
+}
+```
+
