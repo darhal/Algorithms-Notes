@@ -96,3 +96,21 @@ Syntax : `std::pair<T&,T&> minmax(T& a, T& b);`
 Syntax : `std::pair<T,T> minmax( std::initializer_list<T> ilist);` 
 
 -> Returns the smallest and the greatest (respectively) of the values in initializer list .
+
+## Fibonacci Hashing
+Great article on fibonacci hashing : https://probablydance.com/2018/06/16/fibonacci-hashing-the-optimization-that-the-world-forgot-or-a-better-alternative-to-integer-modulo/
+
+The magic number `0x9e3779b97f4a7c15` comes from `2^64 / phi` where `phi` is the golden ratio
+```cpp
+template<class T> 
+struct std::hash<std::vector<T>> {
+    auto operator() (const std::vector<T>& key) const {
+        using hasher = std::hash<T>;
+        std::size_t seed = key.size();
+        for(const auto& i : key) {
+            seed ^= hasher{}(i) + 0x9e3779b97f4a7c15 + (seed << 6) + (seed >> 2);
+        }
+        return seed;
+    }
+};
+````
