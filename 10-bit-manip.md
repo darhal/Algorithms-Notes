@@ -26,3 +26,23 @@ std::popcount(0b011101) // -> 4
 std::popcount(8) // -> 1
 std::popcount(7) // -> 3
 ```
+
+### Another way to do popcount on software
+`n-1` flips the least siginifcant bit of `n` to 0
+```
+For example:
+n         : ...110100
+n-1       : ...110011
+n & (n-1) : ...110000
+```
+We keep flipping least siginficant set bits till we reach 0 meaning there is no least significant bits left.
+```cpp
+int popcount(int n) {
+    int sum = 0;
+    while (n != 0) {
+        sum++;
+        n &= (n - 1);
+    }
+    return sum;
+}
+```
