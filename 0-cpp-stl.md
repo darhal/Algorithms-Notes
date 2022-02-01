@@ -24,7 +24,7 @@ queue<T> queue;
 queue.push(element); // Add
 queue.front(); // First element in the queue (The next element on the list)
 queue.pop(); // Remove the front from the queue
-queue.back(); // Access last element in the heap
+queue.back(); // Access last element in the queue
 stack.size(); // Returns the size of the queue
 ```
 # set/unordered_set
