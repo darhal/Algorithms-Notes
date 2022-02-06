@@ -25,6 +25,8 @@ Counts the number of set bits (i.e the number of bits that are set to 1)
 std::popcount(0b011101) // -> 4
 std::popcount(8) // -> 1
 std::popcount(7) // -> 3
+// C++17 and before
+__builtin_popcount(0b011101); // -> 4
 ```
 
 ### Another way to do popcount on software
