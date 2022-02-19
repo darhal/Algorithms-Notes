@@ -8,7 +8,7 @@ priority_queue<T, Container, Compare> heap; // Wrapper that uses heap operations
 heap.top(); // access the top element O(1)
 heap.push(element); // push element to the heap O(lgn)
 heap.pop(); // remove the top element from the heap O(lgn)
-heap.size(); // access the top element O(1)
+heap.size(); // returns the size of the heap
 ```
 # Stack
 ```cpp
